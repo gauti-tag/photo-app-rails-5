@@ -1,4 +1,5 @@
 Rails.application.configure do
+   #config.hosts << "231f74937a8e45d091353738095129d5.vfs.cloud9.eu-central-1.amazonaws.com"
   # Settings specified here will take precedence over those in config/application.rb.
 
   # In the development environment your application's code is reloaded on
@@ -11,6 +12,11 @@ Rails.application.configure do
 
   # Show full error reports.
   config.consider_all_requests_local = true
+  
+  
+  # setting for mailler
+  config.action_mailer.delivery_method = :test
+  config.action_mailer.default_url_options = {:host => 'https://231f74937a8e45d091353738095129d5.vfs.cloud9.eu-central-1.amazonaws.com/'}
 
   # Enable/disable caching. By default caching is disabled.
   # Run rails dev:cache to toggle caching.
